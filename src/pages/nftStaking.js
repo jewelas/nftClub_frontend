@@ -4,14 +4,10 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { NFTData } from "../constants/nftData";
 
-
 import "../assets/SCSS/pages/nftStaking.scss";
 import NFTCard from "../components/nftStaking/nftCard";
 
-
 const NFTStaking = () => {
-
-
   return (
     <Box className={"nftStaking_container"}>
       <Box className="breadcrumb">
@@ -33,14 +29,28 @@ const NFTStaking = () => {
               <Box className="intro">
                 <span>KENSHO STAKING</span>
                 <Box>My NFTs</Box>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laborum obcaecati dignissimos quae quo ad iste ipsum officiis
+                  deleniti asperiores sit.
+                </p>
               </Box>
             </Box>
           </Box>
           <Box className="row">
             {NFTData.map((item, index) => (
               <Box className="col-12 col-sm-6 col-lg-3">
-                <NFTCard key={index} tokenURI={item.tokenURI} tokenId={item.tokenId} level={item.level} name={item.name} power={item.power} isStaked={item.isStaked} xp={item.xp} xpMax={item.xpMax} />
+                <NFTCard
+                  key={index}
+                  tokenURI={item.tokenURI}
+                  tokenId={item.tokenId}
+                  level={item.level}
+                  name={item.name}
+                  power={item.power}
+                  isStaked={item.isStaked}
+                  xp={item.xp}
+                  xpMax={item.xpMax}
+                />
               </Box>
             ))}
           </Box>
